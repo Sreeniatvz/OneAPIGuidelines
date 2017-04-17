@@ -1,6 +1,6 @@
 # Verizon API Standards & Goverance
 Verizon One API Platform API standards 
-* [Guidelines](#guidelines)
+* [Why?](#guidelines)
 * [Pragmatic REST](#pragmatic-rest)
 * [RESTful URLs](#restful-urls)
 * [HTTP Verbs](#http-verbs)
