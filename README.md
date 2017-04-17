@@ -21,7 +21,6 @@ This document provides standards, guidelines and examples for Verizon One API pl
 
 When we ask API who are you?. I am sure any API answer to your question saying that I am best integrator and I make magic happen.
 
-
 ## Rest-Constraints
 
 * Client-Server
@@ -42,8 +41,6 @@ The term REpresention is how the resource are manipulated.Typically the resource
 For example if we consider Two Pizza team as resource . we have the following properties and represnted in JOSN as follows 
 
 ### Good examples
-
-No values in keys:
 
     "team": [
       {"id": "1", "name": "nanda kumar"},
