@@ -9,7 +9,7 @@ Verizon One API Platform API standards
 * [Responses](#responses)
 * [Error handling](#error-handling)
 * [Versioning](#versions)
-* [CORS] (#cors)
+* [CORS](#cors)
 * [Pagination &Querying](#record-limits)
 * [Request & Response Examples](#request--response-examples)
 * [Mock Responses](#mock-responses)
