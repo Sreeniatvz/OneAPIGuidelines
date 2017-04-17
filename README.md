@@ -1,4 +1,4 @@
-# OneAPIGuidelines
+# Verizon API Standards & Goverance
 Verizon One API Platform API standards 
 * [Guidelines](#guidelines)
 * [Pragmatic REST](#pragmatic-rest)
