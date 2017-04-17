@@ -40,19 +40,19 @@ REST==REpresentional State Transfer. REST is resource based. Here Representation
 The term REpresention is how the resource are manipulated.Typically the resource are represented as JSON or XML, but we may consider using CSV, Image ,HTML etc. 
 
 For example if we consider Two Pizza team as resource . we have the following properties and represnted in JOSN as follows 
-### Example 
-{
-    "name": "Two Pizza team",
-    "size": "30",
-    "project": "verizon one API platform",
-    "developers": [
-                    "Nanda Kumar",
-                    "Suresh Jonnagadla",
-                    "Ross Clanton",
-                    "Nagarjuna Garige
-                    "Josh Stone"
-                ],
-}
+
+### Good examples
+
+No values in keys:
+
+    "team": [
+      {"id": "1", "name": "nanda kumar"},
+      {"id": "2", "name": "suresh jonnagadla"},
+      {"id": "3", "name": "ross clanton"},
+      {"id": "4", "name": "nagarjuna garige"},
+      {"id": "5", "name": "jose stone"}
+      {"id": "6", "name": "lawrance taylor"}
+    ],
 
 ## Pragmatic-REST
 Well, RESTful API != Good API. 
