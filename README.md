@@ -1,4 +1,4 @@
-# Verizon API Standards & Goverance
+# Verizon RESTful API Standards
 Verizon One API Platform API standards 
 * [What is an API?](#guidelines)
 * [REST Constraints](#rest-constraints)
