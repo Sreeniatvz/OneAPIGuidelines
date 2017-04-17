@@ -22,9 +22,9 @@ When we ask API who are you?. I am sure any API answer to your question saying t
 
 
 ## Rest-Constraints
-Client-Server
-Stateless
-Cacheable 
-Layered Systems
-Code-On-Demand(Optional)
-Uniform Interface 
+* Client-Server
+* Stateless
+* Cacheable 
+* Layered Systems
+* Code-On-Demand(Optional)
+* Uniform Interface 
