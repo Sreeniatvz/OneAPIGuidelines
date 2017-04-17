@@ -17,7 +17,7 @@ Verizon One API Platform API standards
 
 ## Guidelines
 
-This document provides standards, guidelines and examples for Verizon One API platform Web APIs, encouraging consistency, maintainability, and best practices across applications. We want our APIs aim to balance a truly RESTful API interface with a positive developer experience.But at the end of the deveopers have Power of Choice. 
+This document provides standards, guidelines and examples for Verizon One API platform Web APIs, encouraging consistency, maintainability, and best practices across applications. We want our APIs aim to balance a truly RESTful API interface with a positive developer experience. But at the end of day the deveopers have Power of Choice. 
 
 When we ask API who are you?. I am sure any API answer to your question saying that I am best integrator and I make magic happen.
 
