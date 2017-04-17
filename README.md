@@ -1,6 +1,6 @@
 # Verizon API Standards & Goverance
 Verizon One API Platform API standards 
-* [Why?](#guidelines)
+* [What is an API?](#guidelines)
 * [REST Constraints](#rest-constraints)
 * [Pragmatic REST](#pragmatic-rest)
 * [RESTful URLs](#restful-urls)
@@ -8,7 +8,8 @@ Verizon One API Platform API standards
 * [HTTP Status codes](#http-statuscods)
 * [Responses](#responses)
 * [Error handling](#error-handling)
-* [Versions](#versions)
+* [Versioning](#versions)
+* [CORS] (#cors)
 * [Pagination &Querying](#record-limits)
 * [Request & Response Examples](#request--response-examples)
 * [Mock Responses](#mock-responses)
