@@ -3,6 +3,7 @@ Verizon One API Platform API standards
 * [What is an API?](#guidelines)
 * [REST Constraints](#rest-constraints)
 * [Pragmatic REST](#pragmatic-rest)
+* [API Design Process](#design-process)
 * [RESTful URLs](#restful-urls)
 * [HTTP Verbs](#http-verbs)
 * [HTTP Status codes](#http-statuscods)
@@ -53,3 +54,9 @@ For example if we consider Two Pizza team as resource . we have the following pr
 
 ## Pragmatic-REST
 Well, RESTful API != Good API. 
+
+## Design-Process
+    * Design
+    * Implement 
+    * Document
+    * Maintain 
