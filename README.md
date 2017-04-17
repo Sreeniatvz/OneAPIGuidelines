@@ -40,7 +40,7 @@ REST==REpresentional State Transfer. REST is resource based. Here Representation
 The term REpresention is how the resource are manipulated.Typically the resource are represented as JSON or XML, but we may consider using CSV, Image ,HTML etc. 
 
 For example if we consider Two Pizza team as resource . we have the following properties and represnted in JOSN as follows 
-
+### Example 
 {
     "name": "Two Pizza team",
     "size": "30",
