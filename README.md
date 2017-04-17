@@ -55,7 +55,10 @@ For example if we consider Two Pizza team as resource . we have the following pr
 Well, RESTful API != Good API. 
 
 ## Design-Process
-    * Design
-    * Implement 
-    * Document
-    * Maintain 
+ * Design
+   1) Do not be very creative,be KISS - Keep It Simple , Supid. 
+   2) Provide what is necessary information no more or less.
+   3) When you are desinging your APIs please use handful of HTTP status codes.
+ * Implement 
+ * Document
+ * Maintain 
