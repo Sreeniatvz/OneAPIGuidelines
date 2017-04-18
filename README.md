@@ -92,11 +92,24 @@ Please Keep it simple and use only plural nouns for all resources. Donot mix sin
 >     /teams instead of /team
 >     /settings instead of /setting
 
-### 4. Use HTTP headers for serialization formats.
+### 4. Use HTTP headers for serialization formats[Content Negoeation].
+Both, client and server, need to know which representation or format is used for the communication. The format has to be specified in the HTTP-Header.
+
+Content-Type defines the request format.
+Accept defines a list of acceptable response formats.
+
 ### 5. Use sub-resources for relations.
 ### 6. Provide filtering, sorting, field selection and paging for collections.
 ### 7. Handle Errors with HTTP status codes.
+     - [HTTP Status codes](#http-statuscods)
 ### 8. Version your API
+>     Never release an API without a version number.
+>     Versions should be integers, not decimal numbers, prefixed with ‘v’.
+>     For example: 
+>     Good: v1, v2, v3
+>     Bad: v-1.1, v1.2, 1.3
+>     Maintain APIs at least one version back.
+
 
 
 
