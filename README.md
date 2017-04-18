@@ -65,13 +65,26 @@ Well, RESTful API != Good API.
  * Maintain 
 ## Best-Practices 
 1. Use Nouns but no Verbs
+
+| HTTP METHOD | POST             | GET                 | PUT         | DELETE |
+| ----------- | ---------------  | ------------------  | ----------- | ------ |
+| CRUD OP     | CREATE           | READ                | UPDATE      | DELETE |
+| /orders     | Create new orders| List all orders     | Bulk update | Delete all orders |
+| /orders/1234| Error            | Show order 1234     | If exists, update Bo; If not, error | Delete Bo |
+
+## Do not use verbs
+>     /getAllOrders
+>     /createOrder
+>     /deleteAllOrders
+
 2. GET method and query parameters should not alter the state
    Use PUT,PATCH,POST and DELETE methods instead of the GET method to alter the state.
 3. Use plural nouns.
-4. Use sub-resources for relations.
-5. Provide filtering, sorting, field selection and paging for collections.
-6. Handle Errors with HTTP status codes.
-7. Version your API
+4. Use HTTP headers for serialization formats.
+5. Use sub-resources for relations.
+6. Provide filtering, sorting, field selection and paging for collections.
+7. Handle Errors with HTTP status codes.
+8. Version your API
 
 
 
