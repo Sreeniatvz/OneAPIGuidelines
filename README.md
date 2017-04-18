@@ -15,6 +15,7 @@ Verizon One API Platform API standards
 * [Request & Response Examples](#request--response-examples)
 * [Mock Responses](#mock-responses)
 * [JSONP](#jsonp)
+* [Best Practices](#best-practices)
 
 ## Guidelines
 
@@ -62,3 +63,15 @@ Well, RESTful API != Good API.
  * Implement 
  * Document
  * Maintain 
+## Best-Practices 
+1. Use Nouns but no Verbs
+2. GET method and query parameters should not alter the state
+   Use PUT,PATCH,POST and DELETE methods instead of the GET method to alter the state.
+3. Use plural nouns.
+4. Use sub-resources for relations.
+5. Provide filtering, sorting, field selection and paging for collections.
+6. Handle Errors with HTTP status codes.
+7. Version your API
+
+
+
