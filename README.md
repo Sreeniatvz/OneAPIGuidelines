@@ -43,7 +43,7 @@ For example if we consider Two Pizza team as resource . we have the following pr
 
 ### Good examples
 
-    "team": [
+    "teams": [
       {"id": "1", "name": "nanda kumar"},
       {"id": "2", "name": "suresh jonnagadla"},
       {"id": "3", "name": "ross clanton"},
@@ -64,7 +64,7 @@ Well, RESTful API != Good API.
  * Document
  * Maintain 
 ## Best-Practices 
-1. Use Nouns but no Verbs
+### 1. Use Nouns but no Verbs
 
 | HTTP METHOD | POST             | GET                 | PUT         | DELETE |
 | ----------- | ---------------  | ------------------  | ----------- | ------ |
@@ -72,19 +72,31 @@ Well, RESTful API != Good API.
 | /orders     | Create new orders| List all orders     | Bulk update | Delete all orders |
 | /orders/1234| Error            | Show order 1234     | If exists, update Bo; If not, error | Delete Bo |
 
-## Do not use verbs
+### Do not use verbs
 >     /getAllOrders
 >     /createOrder
 >     /deleteAllOrders
 
-2. GET method and query parameters should not alter the state
+### 2. GET method and query parameters should not alter the state
    Use PUT,PATCH,POST and DELETE methods instead of the GET method to alter the state.
-3. Use plural nouns.
-4. Use HTTP headers for serialization formats.
-5. Use sub-resources for relations.
-6. Provide filtering, sorting, field selection and paging for collections.
-7. Handle Errors with HTTP status codes.
-8. Version your API
+   Use PUT, POST and DELETE methods  instead of the GET method to alter the state.
+   Do not use GET for state changes:
+   GET /users/5018?activate or
+   GET /users/5018/activate
+   
+### 3. Use plural nouns.
+Please Keep it simple and use only plural nouns for all resources. Donot mix singular and plurals.
+
+/orders instead of /order
+/users instead of /user
+/teams instead of /team
+/settings instead of /setting
+
+### 4. Use HTTP headers for serialization formats.
+### 5. Use sub-resources for relations.
+### 6. Provide filtering, sorting, field selection and paging for collections.
+### 7. Handle Errors with HTTP status codes.
+### 8. Version your API
 
 
 
