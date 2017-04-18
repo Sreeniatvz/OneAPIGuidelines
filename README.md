@@ -80,17 +80,17 @@ Well, RESTful API != Good API.
 ### 2. GET method and query parameters should not alter the state
    Use PUT,PATCH,POST and DELETE methods instead of the GET method to alter the state.
    Use PUT, POST and DELETE methods  instead of the GET method to alter the state.
-   Do not use GET for state changes:
-   GET /users/5018?activate or
-   GET /users/5018/activate
+### Do not use GET for state changes:
+>     GET /users/5018?activate or
+>     GET /users/5018/activate
    
 ### 3. Use plural nouns.
 Please Keep it simple and use only plural nouns for all resources. Donot mix singular and plurals.
 
-/orders instead of /order
-/users instead of /user
-/teams instead of /team
-/settings instead of /setting
+>     /orders instead of /order
+>     /users instead of /user
+>     /teams instead of /team
+>     /settings instead of /setting
 
 ### 4. Use HTTP headers for serialization formats.
 ### 5. Use sub-resources for relations.
