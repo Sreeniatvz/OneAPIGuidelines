@@ -15,6 +15,7 @@ Verizon One API Platform API standards
 * [Request & Response Examples](#request--response-examples)
 * [Mock Responses](#mock-responses)
 * [JSONP](#jsonp)
+* [Safe &Idempotent](#safe-idempotent)
 * [Best Practices](#best-practices)
 
 ## Guidelines
@@ -63,6 +64,43 @@ Well, RESTful API != Good API.
  * Implement 
  * Document
  * Maintain 
+ 
+## Safe-Idempotent
+
+| HTTP Method	| Idempotent |	Safe |
+|--------------|------------|------|
+| OPTIONS	   |   yes	    |  yes |
+| GET	         |   yes	    |  yes | 
+| HEAD	      |   yes	    |  yes |
+| PUT	         |   yes	    |  no  |
+| POST	      |   no	    |  no  |
+| DELETE	      |   yes      |	 no  |
+| PATCH	      |   no	    |  no  |
+
+## Implementing safe methods
+In HTTP, safe methods are not expected to cause side effects. Clients can send requests with safe methods without worrying about causing unintended side effects. To provide this guarantee, implement safe methods as read-only operations.
+
+Safety does not mean that the server must return the same response every time. It just means that the client can make a request knowing that it is not going to change the state of the resource. For instance, both the following requests may be safe:
+
+### First request
+>     GET /quote?symb=VZ HTTP/1.1
+>     Host: www.sreenistock.com
+
+>     HTTP/1.1 200 OK
+>     Content-Type: text/plain;charset=UTF-8
+>     48.96
+
+### Second request 10 minutes later
+>     GET /quote?symb=GOOG HTTP/1.1
+>     Host: www.sreenistock.com
+
+>     HTTP/1.1 200 OK
+>     Content-Type: text/plain;charset=UTF-8
+>     416.10
+
+### Idempotent methods
+Its an mathematical term, an idempotent HTTP method is a HTTP method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same. Again, this only applies to the result, not the resource itself. This still can be manipulated (like an update-timestamp, provided this information is not shared in the (current) resource representation.
+
 ## Best-Practices 
 ### 1. Use Nouns but no Verbs
 
@@ -70,7 +108,7 @@ Well, RESTful API != Good API.
 | ----------- | ---------------  | ------------------  | ----------- | ------ |
 | CRUD OP     | CREATE           | READ                | UPDATE      | DELETE |
 | /orders     | Create new orders| List all orders     | Bulk update | Delete all orders |
-| /orders/1234| Error            | Show order 1234     | If exists, update Bo; If not, error | Delete Bo |
+| /orders/1234| Error            | Show order 1234     | If exists, update order; If not, error | Delete order |
 
 ### Do not use verbs
 >     /getAllOrders
