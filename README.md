@@ -18,6 +18,7 @@ Verizon One API Platform API standards
 * [JSONP](#jsonp)
 * [Safe &Idempotent](#safe-idempotent)
 * [Best Practices](#best-practices)
+* [Richardson Maturity Model](#rmm)
 
 ## Introduction
 Anytime, Anywhere, Any device” are the key problems of digitalisation. So RESTful API is the answer to “Business
@@ -313,5 +314,18 @@ All exceptions should be mapped in an error payload. Here is an example how a JS
    4. Content negotiation should be offered by the web service, which allows the client to choose the representation
       format by using the HTTP header field “ACCEPT” in his request. Furthermore, there is the opportunity to weight the preference of         the client with a quality parameter
 
+## Richardson Maturity Model
+  In part to help elucidate the differences between SOAP and REST, and to provide a framework for classifying the different kinds of    systems many people were inappropriately calling “REST,” Leonard Richardson introduced a Maturity Model. You can think of the classifications as a measure of how closely a system embraces the different pieces of Web Technology: Information resources, HTTP as an application protocol, and hypermedia as the medium of control.
+  
+ | LEVEL|	ADOPTION |
+ |------|-----------|
+ | 0 |	This is basically where SOAP is. There are no information resources, HTTP is treated like a transport protocol, and there is no         concept of hypermedia. Conclusion: REST and SOAP are different approaches.|
+ |1 |	URLs are used, but not always as appropriate information resources, and everything is usually a GET request (including requests that update server state). Most people new to REST first build systems that look like this.|
+| 2	|URLs are used to represent information resources. HTTP is respected as an application protocol, sometimes including content negotiation. Most Internet-facing “REST” web services are really only at this level because they only support non- hypermedia formats.|
+|3	|URLs are used to represent information resources. HTTP is respected as an application protocol including content negotiation. Hypermedia drives the interactions for clients.|
 
+Calling it a “maturity model” might seem to suggest that you should only build systems at the most “mature” level. That should not be the take-home message. There is value at being at Level 2, and the shift to Level 3 is often simply the adoption of a new MIME type. The shift from Level 0 to Level 3 is much harder, so even incremental adoption adds value.
+
+Start by identifying the information resources you would like to expose. Adopt HTTP as an application protocol for manipulating these information resources—including support for content negotiation. Then, when you are ready, adopt hypermedia-based MIME types and you should get the full benefits of REST.
+  
 
