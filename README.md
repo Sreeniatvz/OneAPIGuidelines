@@ -1,5 +1,6 @@
 # Verizon RESTful API Standards
 Verizon One API Platform API standards 
+* [Introduction](#introduction)
 * [What is an API?](#guidelines)
 * [REST Constraints](#rest-constraints)
 * [Pragmatic REST](#pragmatic-rest)
@@ -18,6 +19,10 @@ Verizon One API Platform API standards
 * [Safe &Idempotent](#safe-idempotent)
 * [Best Practices](#best-practices)
 
+## Introduction
+In this mordern digital era many enterpirse are transforming to digital,so more and more REST based architectural style RESTful APIs were developed, which uses existing functionality from the application layer protocol Hypertext Transfer Protocol (HTTP). This results in an increasing interest compared to traditional web services with Simple Object Access Protocol (SOAP), which can be shown in a
+Google Trend Analysis with the keywords REST and SOAP or in the increasing usage of REST- instead of SOAP-based web services. Also big companies, such as Twitter or Amazon, are using REST-like interfaces for their services,which are shown in their Application Programming Interface (API) documentations.
+ 
 ## Guidelines
 
 This document provides standards, guidelines and examples for Verizon One API platform Web APIs, encouraging consistency, maintainability, and best practices across applications. We want our APIs aim to balance a truly RESTful API interface with a positive developer experience. But at the end of day the deveopers have Power of Choice. 
@@ -25,12 +30,15 @@ This document provides standards, guidelines and examples for Verizon One API pl
 When we ask API who are you?. I am sure any API answer to your question saying that I am best integrator and I make magic happen.
 
 ## Rest-Constraints
-    * Client-Server
-    * Stateless
-    * Cacheable 
-    * Layered Systems
-    * Code-On-Demand(Optional)
-    * Uniform Interface 
+If all of these below constraints are fulfilled by a any web API service,it can be called RESTful. The only exception is “Code on Demand”,  since it is an optional constraint and has not to be implemented by a REST service.
+
+>     Client-Server
+>     Stateless
+>     Cacheable 
+>     Layered Systems
+>     Uniform Interface
+>     Code-On-Demand(Optional)
+ 
 
 What is REST?
 REST==REpresentional State Transfer. REST is resource based. Here Representation refers to the payload which we will be exchangeing  between client and server. In this REST world we will be talking about. 
@@ -299,7 +307,7 @@ All exceptions should be mapped in an error payload. Here is an example how a JS
 ### 9. Support of MIME Types.
    1. At least two representation formats should be supported by the any RESTful service, such as JSON or Extensible Markup Language           (XML).  
    2. JSON should be the default representation format since its increasing distribution (Because of the Mobile first ,cloud first).
-   3. Existing MIME types should be used, which already support hypermedia such as JSON-LD (JSON for Linking Data), Collection+JSON and         Siren.[HATEOAS principle].
+   3. Existing MIME types should be used, which already support hypermedia such as JSON-LD (JSON for Linking Data), Collection+JSON and         Siren. [HATEOAS principle].
    4. Content negotiation should be offered by the web service, which allows the client to choose the representation
       format by using the HTTP header field “ACCEPT” in his request. Furthermore, there is the opportunity to weight the preference of         the client with a quality parameter
 
