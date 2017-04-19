@@ -20,8 +20,10 @@ Verizon One API Platform API standards
 * [Best Practices](#best-practices)
 
 ## Introduction
-In this mordern digital era many enterpirse are transforming to digital,so more and more REST based architectural style RESTful APIs were developed, which uses existing functionality from the application layer protocol Hypertext Transfer Protocol (HTTP). This results in an increasing interest compared to traditional web services with Simple Object Access Protocol (SOAP), which can be shown in a
-Google Trend Analysis with the keywords REST and SOAP or in the increasing usage of REST- instead of SOAP-based web services. Also big companies, such as Twitter or Amazon, are using REST-like interfaces for their services,which are shown in their Application Programming Interface (API) documentations.
+Anytime, Anywhere, Any device” are the key problems of digitalisation. So RESTful API is the answer to “Business
+Agility” as it allows to build rapidly new GUI for upcoming devices.
+
+In this mordern digital era many enterpirse are transforming to digital,so more and more REST based architectural style RESTful APIs were developed, which uses existing functionality from the application layer protocol Hypertext Transfer Protocol (HTTP). This results in an increasing interest compared to traditional web services with Simple Object Access Protocol (SOAP).
  
 ## Guidelines
 
