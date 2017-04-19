@@ -18,4 +18,14 @@ This event happens when if any of the following business contract or agreement c
 2.	Business asked changes on existing APIs.
 3.	Changes in existing agreement with vendors or business partners.
 ## Requirements gathering 
+In this stage or activity the API architects and business analysts work together to create API definitions. The API governance
+team defines the process,polices and standards for the API interface. 
+Here are the list of questions and standards enforced by Goverance team .
+
+1. Which API specifications standards should be used? Swagger or RAML documentation? 
+2. Who is responsible for the reviewing and approving the of the API. Product Owner or Business Owner
+3. What are common APIGEE policies are applied or added to this API.
+4. What is the auntentication, authroization scheme used.
+
+## Design & Develop
 
