@@ -81,6 +81,16 @@ Two URLs have the same origin if they have identical schemes, hosts, and ports. 
 >     https://verizon.com/vzonepaigee.html - Different scheme
 >     http://www.verizon.com/vzonepaigee.html - Different subdomain
 
+## JSONP
+JSONP stands for JSON with Padding.
+JSONP is a method for sending JSON data without worrying about cross-domain issues.
+JSONP does not use the XMLHttpRequest object.
+JSONP uses the <script> tag instead.
+
+Requesting a file from another domain can cause problems, due to cross-domain policy.
+Requesting an external script from another domain does not have this problem.
+JSONP uses this advantage, and request files using the the script tag instead of the XMLHttpRequest object.
+
 ## Safe-Idempotent
 
 Idempotence, in programming and mathematics, is a property of some operations such that no matter how many times you execute them, you achieve the same result
