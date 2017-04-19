@@ -64,7 +64,23 @@ Well, RESTful API != Good API.
  * Implement 
  * Document
  * Maintain 
- 
+
+## Cors
+Browser security prevents a web page from making AJAX requests to another domain. This restriction is called the same-origin policy, and prevents a malicious site from reading sensitive data from another site. However, sometimes you might want to let other sites make cross-origin requests to your web app.
+Cross Origin Resource Sharing (CORS) is a W3C standard that allows a server to relax the same-origin policy. Using CORS, a server can explicitly allow some cross-origin requests while rejecting others. CORS is safer and more flexible than earlier techniques such as JSONP.
+
+### What is "same origin"?
+Two URLs have the same origin if they have identical schemes, hosts, and ports. (RFC 6454)
+
+### These two URLs have the same origin:
+>     http://verizon.com/itwworkbench.html
+>     http://verizon.com/policyserver.html
+### These URLs have different origins than the previous two:
+>     http://verizon.net - Different domain
+>     http://verizon.com:9000/vzonepaigee.html - Different port
+>     https://verizon.com/vzonepaigee.html - Different scheme
+>     http://www.verizon.com/vzonepaigee.html - Different subdomain
+
 ## Safe-Idempotent
 
 Idempotence, in programming and mathematics, is a property of some operations such that no matter how many times you execute them, you achieve the same result
@@ -153,7 +169,19 @@ Accept defines a list of acceptable response formats.
 | 500| Internal Server Error | Your request could not be completed because there was a problem with the service.|
 | 503| Service Unavailable| There's a problem with the service right now. Please try again later.|
      
-     
+### 9. Use error payloads
+All exceptions should be mapped in an error payload. Here is an example how a JSON payload should look like.
+>     {
+>     "errors": [
+>     {
+>        "userMessage": "Sorry, the requested resource does not exist",
+>        "internalMessage": "No order found in the database",
+>        "code": 34,
+>        "more info": "http://dev.verizob.com/api/v1/errors/12345"
+>     }
+>     ]
+>     } 
+
 ### 8. Version your API
 >     Never release an API without a version number.
 >     Versions should be integers, not decimal numbers, prefixed with ‘v’.
