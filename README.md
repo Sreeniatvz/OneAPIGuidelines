@@ -64,8 +64,24 @@ Well, RESTful API != Good API.
  * Implement 
  * Document
  * Maintain 
+## HTTP-Verbs
 
-## Cors
+|HTTP Method |	RFC	    |  Request Has Body	|Response Has Body|	Safe|	Idempotent	|Cacheable|
+|------------|-----------|-------------------|-----------------|------|-------------|---------|
+|GET	       |  RFC 7231 |	   No             |	Yes          |     Yes |	   Yes |	   Yes|
+|HEAD	       |  RFC 7231 |	   No	            |  No           |  	Yes|	   Yes	 |  Yes|
+|POST	       |  RFC 7231 |	   Yes	         |   Yes	       |     No |   	No     |Yes|
+|PUT	       | RFC 7231	 |    Yes	         |   Yes	       |     No  |     Yes  | 	No|
+|DELETE	    |  RFC 7231 |	   No             |	Yes	       |     No  |  	Yes   |	No|
+|CONNECT	    |  RFC 7231 |	   Yes	         |   Yes         |   	No   |    No    |	No|
+|OPTIONS	    |  RFC 7231 |	   Optional       |	Yes	       |     Yes |     Yes  |    No|
+|TRACE	    |  RFC 7231 |	   No	            |   Yes         |   	Yes  | 	Yes   |	No|
+|PATCH	    |  RFC 5789 |	   Yes	         |   Yes         |      No |      No  |  	Yes|
+
+
+
+
+## CORS
 Browser security prevents a web page from making AJAX requests to another domain. This restriction is called the same-origin policy, and prevents a malicious site from reading sensitive data from another site. However, sometimes you might want to let other sites make cross-origin requests to your web app.
 Cross Origin Resource Sharing (CORS) is a W3C standard that allows a server to relax the same-origin policy. Using CORS, a server can explicitly allow some cross-origin requests while rejecting others. CORS is safer and more flexible than earlier techniques such as JSONP.
 
@@ -187,7 +203,7 @@ All exceptions should be mapped in an error payload. Here is an example how a JS
 >        "userMessage": "Sorry, the requested resource does not exist",
 >        "internalMessage": "No order found in the database",
 >        "code": 34,
->        "more info": "http://dev.verizob.com/api/v1/errors/12345"
+>        "more info": "http://dev.verizon.com/api/v1/errors/12345"
 >     }
 >     ]
 >     } 
