@@ -33,7 +33,7 @@ When we ask API who are you?. I am sure any API answer to your question saying t
     * Uniform Interface 
 
 What is REST?
-REST==REpresentional State Transfer. REST is resource based. Here Representation refers to the payload which we will be exchangeing  between client and server. In this REST world we will be talking about 
+REST==REpresentional State Transfer. REST is resource based. Here Representation refers to the payload which we will be exchangeing  between client and server. In this REST world we will be talking about. 
  * Things vs Actions
  * Nouns Vs Verbs.
  * Multiple URIs may refering to the same resource (ex: Employee ,Invoice are resources)
@@ -67,6 +67,8 @@ Well, RESTful API != Good API.
  
 ## Safe-Idempotent
 
+Idempotence, in programming and mathematics, is a property of some operations such that no matter how many times you execute them, you achieve the same result
+
 | HTTP Method	| Idempotent |	Safe |
 |--------------|------------|------|
 | OPTIONS	   |   yes	    |  yes |
@@ -89,7 +91,6 @@ Safety does not mean that the server must return the same response every time. I
 >     HTTP/1.1 200 OK
 >     Content-Type: text/plain;charset=UTF-8
 >     48.96
-
 ### Second request 10 minutes later
 >     GET /quote?symb=GOOG HTTP/1.1
 >     Host: www.sreenistock.com
@@ -97,7 +98,6 @@ Safety does not mean that the server must return the same response every time. I
 >     HTTP/1.1 200 OK
 >     Content-Type: text/plain;charset=UTF-8
 >     416.10
-
 ### Idempotent methods
 Its an mathematical term, an idempotent HTTP method is a HTTP method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same. Again, this only applies to the result, not the resource itself. This still can be manipulated (like an update-timestamp, provided this information is not shared in the (current) resource representation.
 
@@ -139,7 +139,21 @@ Accept defines a list of acceptable response formats.
 ### 5. Use sub-resources for relations.
 ### 6. Provide filtering, sorting, field selection and paging for collections.
 ### 7. Handle Errors with HTTP status codes.
-     - [HTTP Status codes](#http-statuscods)
+
+| HTTP Status Code   |  Short Description   |   Details
+|--------------------|----------------------|----------------|
+| 200                |   OK                 |  The request is successful.|
+| 201| Created |A new resource is created.|
+| 202| Accepted | The request has been accepted for processing.|
+| 400| Bad Request| The request contained an error.|
+| 401| Unauthorized Access was denied.| You may have entered your credentials incorrectly, or you might not have access to the requested | resource or operation|.
+| 403| Forbidden |The request is for something forbidden. Authorization will not help.|
+| 404| Not Found |The requested resource was not found.|
+| 429| Too Many Requests| The user has sent too many requests in a given amount of time. The account is being rate limited.|
+| 500| Internal Server Error | Your request could not be completed because there was a problem with the service.|
+| 503| Service Unavailable| There's a problem with the service right now. Please try again later.|
+     
+     
 ### 8. Version your API
 >     Never release an API without a version number.
 >     Versions should be integers, not decimal numbers, prefixed with ‘v’.
