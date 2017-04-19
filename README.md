@@ -6,7 +6,7 @@ Verizon One API Platform API standards
 * [API Design Process](#design-process)
 * [RESTful URLs](#restful-urls)
 * [HTTP Verbs](#http-verbs)
-* [HTTP Status codes](#http-statuscods)
+* [HTTP Status codes](#http-statuscodes)
 * [Responses](#responses)
 * [Error handling](#error-handling)
 * [Versioning](#versions)
@@ -235,6 +235,7 @@ Accept defines a list of acceptable response formats.
 ### 5. Use sub-resources for relations.
 ### 6. Provide filtering, sorting, field selection and paging for collections.
 ### 7. Handle Errors with HTTP status codes.
+## HTTP-Statuscodes
 
 | HTTP Status Code   |  Short Description   |   Details
 |--------------------|----------------------|----------------|
