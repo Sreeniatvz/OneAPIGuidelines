@@ -197,6 +197,31 @@ Safety does not mean that the server must return the same response every time. I
 ### Idempotent methods
 Its an mathematical term, an idempotent HTTP method is a HTTP method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same. Again, this only applies to the result, not the resource itself. This still can be manipulated (like an update-timestamp, provided this information is not shared in the (current) resource representation.
 
+## Error-Handling 
+In Web API world each Information about the implementation of the service is hidden by the interface. Therefore, only the outer behavior can be observed through responses by the web service, which is why well-known software debugging techniques such as setting
+exception breakpoints can not be applied here.
+
+For this reason, the corresponding error message has to be clear and understandable so that the cause of the error can be easily identified. With this in mind, we could identify three best practices:
+1) The amount of used HTTP status codes should be limited to reduce the feasible effort for looking up in the specification.
+2) Specific HTTP status codes should be used according to the official HTTP specification.
+3) A detailed error message should be given as a hint for the error cause on client side. That is why, an error message should consist of four ingredients.
+1. A message for developers, which describes the cause of the error and possibly some hints how to solve the problem.
+2) A message that can be shown to the user.
+3) An application specific error code.
+4) A hyperlink for further information about the problem
+>     For example :
+>     HTTP/1.1 404 NOT FOUND
+>     {
+>      "error" : {
+>      "responseCode" : 404,
+>      "errorCode" : 104,
+>     "messages" : {
+>     "developer" : "The resource ’profile’ could not be found.",
+>     "user" : "An error occurred while requesting the information. Please contact our technical support."
+>     },
+>      "additionalErrorInfo": ".../verizonspec/errors/104"}
+
+
 ## Best-Practices 
 ### 1. Use Nouns but no Verbs
 
@@ -271,6 +296,12 @@ All exceptions should be mapped in an error payload. Here is an example how a JS
 >     Bad: v-1.1, v1.2, 1.3
 >     Maintain APIs at least one version back.
 
+### 9. Support of MIME Types.
+   1. At least two representation formats should be supported by the any RESTful service, such as JSON or Extensible Markup Language           (XML).  
+   2. JSON should be the default representation format since its increasing distribution (Because of the Mobile first ,cloud first).
+   3. Existing MIME types should be used, which already support hypermedia such as JSON-LD (JSON for Linking Data), Collection+JSON and         Siren.[HATEOAS principle].
+   4. Content negotiation should be offered by the web service, which allows the client to choose the representation
+      format by using the HTTP header field “ACCEPT” in his request. Furthermore, there is the opportunity to weight the preference of         the client with a quality parameter
 
 
 
