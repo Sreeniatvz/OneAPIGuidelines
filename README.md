@@ -57,10 +57,11 @@ For example if we consider Two Pizza team as resource . we have the following pr
 Well, RESTful API != Good API. 
 
 ## Design-Process
- * Design
+ ### Design
    1) Do not be very creative,be KISS - Keep It Simple , Supid. 
    2) Provide what is necessary information no more or less.
-   3) When you are desinging your APIs please use handful of HTTP status codes.
+   3) Pick the autentication strategy which is not Basic.
+   4) When you are desinging your APIs please use handful of HTTP status codes.
 >     For example :
 >     200  OK
 >     201  Created
@@ -70,7 +71,7 @@ Well, RESTful API != Good API.
 >     404  Resource not found.
 >     
    
- * Implement 
+ ### Implement 
    1. Do not let your implementation leaks to your abstraction layer. Because API is abstraction over your backend.
    2. Use SSL/TLS , do not roll your own security.
    3. Be consistent with accepted best practices and standards.
@@ -87,11 +88,14 @@ Well, RESTful API != Good API.
 >     GET /orders/5018        GET /getAllOrderWithId/5018
 >     POST /orders            POST /createOrder
 
- * Document
- 
- * Maintain 
+ ### Document
+ 1. A good API lives & dies by its documentation.
+ 2. Please provide API changes call logs - bug Fixs.
+ 3. 
+ ### Maintain 
  1. Versioning - Keep in mind that your API should stand a test of time.
- 2. Use URL versioning.
+ 2. Do not introduce breaking changes like removing properties.
+ 3. Use URL versioning.
 >     For Example:
 >     GET /v1/orders
 >     Host :www.verizon.com
