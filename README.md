@@ -13,7 +13,7 @@ Verizon One API Platform API standards
 * [Versioning](#versions)
 * [CORS](#cors)
 * [Pagination &Querying](#record-limits)
-* [Request & Response Examples](#request--response-examples)
+* [Request & Response Examples](#request-response-examples)
 * [Mock Responses](#mock-responses)
 * [JSONP](#jsonp)
 * [Safe &Idempotent](#safe-idempotent)
@@ -207,6 +207,10 @@ Safety does not mean that the server must return the same response every time. I
 >     416.10
 ### Idempotent methods
 Its an mathematical term, an idempotent HTTP method is a HTTP method that can be called many times without different outcomes. It would not matter if the method is called only once, or ten times over. The result should be the same. Again, this only applies to the result, not the resource itself. This still can be manipulated (like an update-timestamp, provided this information is not shared in the (current) resource representation.
+
+## Request-Response-Examples
+>  Please refer the follwing RESTful APIs
+>  https://jsonplaceholder.typicode.com/
 
 ## Error-Handling 
 In Web API world each Information about the implementation of the service is hidden by the interface. Therefore, only the outer behavior can be observed through responses by the web service, which is why well-known software debugging techniques such as setting
