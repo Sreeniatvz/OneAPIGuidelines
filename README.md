@@ -1,7 +1,7 @@
 # Verizon RESTful API Standards
 Verizon One API Platform API standards 
 * [Introduction](#introduction)
-* [What is an API?](#guidelines)
+* [What is an API?](#api)
 * [REST Constraints](#rest-constraints)
 * [Pragmatic REST](#pragmatic-rest)
 * [API Design Process](#design-process)
@@ -22,7 +22,9 @@ Agility” as it allows to build rapidly new GUI for upcoming devices.
 
 In this mordern digital era many enterpirse are transforming to digital,so more and more REST based architectural style RESTful APIs were developed, which uses existing functionality from the application layer protocol Hypertext Transfer Protocol (HTTP). This results in an increasing interest compared to traditional web services with Simple Object Access Protocol (SOAP).
  
-## Guidelines
+## API
+In technical terms, an API defines the contract of a software component in terms of the protocol, data format, and the endpoint for two computer applications to communicate with each other over a network. In simple terms, APIs are a set of requirements that
+govern how two applications can talk to each other.
 
 This document provides standards, guidelines and examples for Verizon One API platform Web APIs, encouraging consistency, maintainability, and best practices across applications. We want our APIs aim to balance a truly RESTful API interface with a positive developer experience. But at the end of day the deveopers have Power of Choice. 
 
