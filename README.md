@@ -35,13 +35,39 @@ When we ask API who are you?. I am sure any API answer to your question saying t
 ## Rest-Constraints
 If all of these below constraints are fulfilled by a any web API service,it can be called RESTful. The only exception is “Code on Demand”,  since it is an optional constraint and has not to be implemented by a REST service.
 
->     Client-Server
->     Stateless
->     Cacheable 
->     Layered Systems
->     Uniform Interface
->     Code-On-Demand(Optional)
- 
+### Client-Server
+Perhaps the most foundational constraint, Client-Server enforces the separation of concerns in the form of a client-server architecture. This helps establish a fundamental distributed architecture, thereby supporting the independent evolution of the client-side logic and server-side logic.
+
+### Stateless
+
+The communication between client and server must be stateless between requests. This means that each request from a service consumer should contain all the necessary information for the service to understand the meaning of the request, and all session state data should then be returned to the service consumer at the end of each request.
+
+### Cacheable 
+
+Response messages from the service to its consumers are explicitly labeled as cacheable or non-cacheable. This way, the service, the consumer, or one of the intermediary middleware components can cache the response for reuse in later requests
+
+### Layered Systems
+
+A REST-based solution can be comprised of multiple architectural layers, and no one layer can "see past" the next. Layers can be added, removed, modified, or reordered in response to how the solution needs to evolve.
+
+### Uniform Interface
+By applying uniform interface constraint:
+
+Overall system architecture is simplified and the visibility of interactions is improved.
+Implementations are decoupled from the services they provide and encourage independent evolvability.
+Trade off: Degrades efficiency since information is transferred in a standardized form rather than one which is specific to application's needs.
+Further a uniform interface has four sub-constraints
+
+1. Identification of resources.
+2. Manipulation of resources through representations
+3. Self descriptive messages
+4. Hypermedia as the engine of application state (HATEOAS)
+
+Read more: http://mrbool.com/rest-architectural-elements-and-constraints/29339#ixzz4elDWLTJP
+
+### Code-On-Demand(Optional)
+
+This optional constraint is primarily intended to allow logic within clients (such as Web browsers) to be updated independently from server-side logic. Code-On-Demand typically relies on the use of Web-based technologies, such as Web browser plug-ins, applets, or client-side scripting languages (i.e. JavaScript). 
 
 What is REST?
 REST==REpresentional State Transfer. REST is resource based. Here Representation refers to the payload which we will be exchangeing  between client and server. In this REST world we will be talking about. 
