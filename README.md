@@ -259,6 +259,17 @@ For this reason, the corresponding error message has to be clear and understanda
 >      "additionalErrorInfo": ".../verizonspec/errors/104"}
 
 
+## Versioning 
+
+One of the major challenges surrounding exposing RESTful APIs are handling updates to the API contract. Clients may not want to update their applications when the API changes, so a versioning strategy becomes crucial. A versioning strategy allows clients to continue using the existing REST API and migrate their applications to the newer API when they are ready.
+
+### There are four common ways to version a REST API.
+>     Versioning through URI Path --http://www.verizon.com/api/v1/products
+>     Versioning through query parameters --http://www.verizon.com/api/products?version=1
+>     Versioning through custom headers -- curl -H “Accepts-version: 1.0” http://www.example.com/api/products
+>     Versioning through content negotiation --curl -H “Accept: application/vnd.xm.device+json; version=1” http://www.example.com/api/products
+
+
 ## Best-Practices 
 ### 1. Use Nouns but no Verbs
 
