@@ -351,7 +351,7 @@ All exceptions should be mapped in an error payload. Here is an example how a JS
    4. Content negotiation should be offered by the web service, which allows the client to choose the representation
       format by using the HTTP header field “ACCEPT” in his request. Furthermore, there is the opportunity to weight the preference of         the client with a quality parameter
 
-## Richardson Maturity Model
+## RMM
   In part to help elucidate the differences between SOAP and REST, and to provide a framework for classifying the different kinds of    systems many people were inappropriately calling “REST,” Leonard Richardson introduced a Maturity Model. You can think of the classifications as a measure of how closely a system embraces the different pieces of Web Technology: Information resources, HTTP as an application protocol, and hypermedia as the medium of control.
   
  | LEVEL|	ADOPTION |
