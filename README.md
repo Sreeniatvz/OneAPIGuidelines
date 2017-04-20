@@ -8,7 +8,7 @@ Verizon One API Platform API standards
 * [HTTP Verbs](#http-verbs)
 * [HTTP Status codes](#http-statuscodes)
 * [Error handling](#error-handling)
-* [Versioning](#versions)
+* [Versioning](#versioning)
 * [CORS](#cors)
 * [Request & Response Examples](#request-response-examples)
 * [JSONP](#jsonp)
