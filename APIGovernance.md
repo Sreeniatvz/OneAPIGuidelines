@@ -7,8 +7,6 @@ API stands for Application Programming Interface,mainly API's were desinged and 
 APIs have started their new life in modern elastic, social, mobile world. With the modern Web APIs dramatically growing, and high availability through the internet, increasingly business values, and becoming more and more important as the application landscape of enterprises, APIs quality (security, performance, availability, …) and risk from exposing data and services by using open APIs
 become main concerns to enterprises. Thus, API management is becoming a very important core component in modern service infrastructure. In this section, the rise, development, and importance of API management are described and discussed.
 
-Although API management is a newly defined term, we will see API management is just an extension of SOA Management and provides new  technologies and architectural principles, such as developer portal, Key Management, and metering as well as billing facilities that SOA management does not cover. API management is shaping the multi-channel and multi-tenant strategy cross-organizational boundaries.
-
 ## API Governance addresses:
 1. Tracking the life-cycle of each API from inception to sun-setting.
 2. API Security Model employed and the details of managing it.
