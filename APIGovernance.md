@@ -17,6 +17,7 @@ Although API management is a newly defined term, we will see API management is j
 5. Enabling the monetization of APIs.
 6. API versioning
 
+
 ## Scope of the API Governance.
 API governance incorporates the following stages or activities. 
 1.	New API proposal 
